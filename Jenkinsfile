@@ -73,7 +73,6 @@ pipeline {
                   fi
                 done
               fi
-              docker system prune -f --volumes || :
               docker image prune -af || :
            '''
         script{
@@ -763,7 +762,6 @@ pipeline {
                   if [[ -n "${containers}" ]]; then
                     docker stop ${containers}
                   fi
-                  docker system prune -f --volumes || :
                   docker image prune -af || :
                '''
           }
@@ -1189,7 +1187,6 @@ EOF
                 fi
               done
             fi
-            docker system prune -f --volumes || :
             docker image prune -af || :
          '''
       cleanWs()
