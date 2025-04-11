@@ -62,6 +62,6 @@ RUN \
 # copy local files
 COPY root/ /
 
-# ports and volumes
+# ports and volms
 EXPOSE 80 443
 
